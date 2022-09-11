@@ -1,12 +1,7 @@
-import React from 'react';
 import {
   AreaChart,
   Area,
-  XAxis,
-  YAxis,
-  CartesianGrid,
   Tooltip,
-  ResponsiveContainer,
 } from "recharts";
 
 const data = [
@@ -73,9 +68,6 @@ const SimpleAreaChart = () => {
           <stop offset="95%" stopColor="#47c2be" stopOpacity={0} />
         </linearGradient>
       </defs>
-      {/* <CartesianGrid strokeDasharray="3 3" /> */}
-      {/* <XAxis dataKey="name" /> */}
-      {/* <YAxis /> */}
       <Tooltip content={<CustomTooltip />} wrapperStyle={{ outline: "none" }} />
       <Area
         type="monotone"

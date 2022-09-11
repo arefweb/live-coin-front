@@ -1,14 +1,7 @@
-import React from 'react';
 import {
   BarChart,
   Bar,
-  Cell,
-  XAxis,
-  YAxis,
-  CartesianGrid,
   Tooltip,
-  Legend,
-  ResponsiveContainer,
 } from "recharts";
 
 const data = [
@@ -75,15 +68,11 @@ const SimpleBarChart = () => {
           <stop offset="95%" stopColor="#47c2be" stopOpacity={0} />
         </linearGradient>
       </defs>
-      {/* <CartesianGrid strokeDasharray="3 3" />
-      <XAxis dataKey="name" />
-      <YAxis /> */}
       <Tooltip
         content={<CustomTooltip />}
         wrapperStyle={{ outline: "none" }}
         cursor={{ fill: "#293140" }}
       />
-      {/* <Legend /> */}
       <Bar dataKey="uv" fill="url(#colorUvB)" />
     </BarChart>
   );
@@ -111,7 +100,6 @@ const CustomTooltip = ({ active, payload, label }: ICustom) => {
         }}
       >
         <p>{`Volume : $${payload[0].value}`}</p>
-        {/* <p className="intro">{getIntroOfPage(label)}</p> */}
       </div>
     );
   }
